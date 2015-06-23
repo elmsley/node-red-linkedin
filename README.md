@@ -11,6 +11,8 @@ Nodes related to integrating single sign-on with LinkedIn (OAuth 2.0)
 ## Setup
  - Create your app on LinkedIn http://developer.linkedin.com/
  - Obtain *client_id*, *client_secret*, and create a *redirect_uri*
+ - Create an html page with a link to LinkedIn to sign in. (eg. a href="https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=XXXXXX&redirect_uri=https%3A%2F%2Fsampleapp.mybluemix.net%2Fauth%2Flinkedin%2Fcallback&state=123456789&scope=r_basicprofile")
+
  
 ## Usage
  - Open node-red to create a new flow
@@ -21,6 +23,8 @@ Nodes related to integrating single sign-on with LinkedIn (OAuth 2.0)
     4. *linkedin basic profile*
     5. *function(2)*
     6. *http response*
+ - Deploy the flow
+ - Click on the link from your html page to test the flow.
  
  ### http request
  - This is the callback url "Authorized Redirect URLs" from the LinkedIn OAuth 2.0 configuration parameter.  LinkedIn will call your application back with state and code.
