@@ -1,7 +1,4 @@
 # node-red-linkedin
-To add additional nodes, either:
- - drop them in this directory and add their dependencies to ../package.json
- - add their npm package name to ../package.json
 
 Nodes related to integrating single sign-on with LinkedIn (OAuth 2.0)
 
