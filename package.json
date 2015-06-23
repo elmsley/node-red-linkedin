@@ -1,6 +1,6 @@
 {
   "name": "node-red-linkedin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Node-red modules for LinkedIn OAuth 2.0 Integration",
   "main": "linkedin-basic-profile.js",
   "scripts": {
