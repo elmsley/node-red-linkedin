@@ -1,0 +1,72 @@
+<script type="text/javascript">
+    RED.nodes.registerType('linkedin-basic-profile',{
+        category: 'social',
+        color: '#8CC63F',
+        defaults: {
+	    name : 		{value:"linkedin basic profile"},
+            id: 		{value:"", required: false},
+            num_connections: 	{value:"", required: false},
+            picture_url: {value:"", required: false},
+            formatted_name: {value:"", required: false},
+            summary: {value:"", required: false},
+            specialties: {value:"", required: false},
+            positions: {value:"", required: false},
+            public_profile_url: {value:"", required: false}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "light.png",
+        label: function() {
+            return this.name||"linkedin basic profile";
+        },
+	paletteLabel: "linkedin basic profile"
+    });
+</script>
+
+<script type="text/x-red" data-template-name="linkedin-basic-profile">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> name</label>
+	<input type="text" id="node-input-name" placeholder="name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-id"><i class="icon-tag"></i> LinkedIn ID</label>
+	<input type="checkbox" value="1" id="node-input-id" placeholder="id">
+    </div>
+    <div class="form-row">
+        <label for="node-input-num_connections"><i class="icon-tag"></i> Number of Connections</label>
+	<input type="checkbox" value="1" id="node-input-num_connections" placeholder="num_connections">
+    </div>
+    <div class="form-row">
+        <label for="node-input-picture_url"><i class="icon-tag"></i> Picture URL</label>
+	<input type="checkbox" value="1" id="node-input-picture_url" placeholder="picture_url">
+    </div>
+    <div class="form-row">
+        <label for="node-input-formatted_name"><i class="icon-tag"></i> Formatted Name</label>
+	<input type="checkbox" value="1" id="node-input-formatted_name" placeholder="formatted_name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-summary"><i class="icon-tag"></i> Summary</label>
+	<input type="checkbox" value="1" id="node-input-summary" placeholder="summary">
+    </div>
+    <div class="form-row">
+        <label for="node-input-specialties"><i class="icon-tag"></i> Specialties</label>
+	<input type="checkbox" value="1" id="node-input-specialties" placeholder="specialties">
+    </div>
+    <div class="form-row">
+        <label for="node-input-positions"><i class="icon-tag"></i> Positions</label>
+	<input type="checkbox" value="1" id="node-input-positions" placeholder="positions">
+    </div>
+    <div class="form-row">
+        <label for="node-input-public_profile_url"><i class="icon-tag"></i> Public Profile URL</label>
+	<input type="checkbox" value="1" id="node-input-public_profile_url" placeholder="public_profile_url">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="linkedin-basic-profile">
+    <p>
+        This will attempt to retrieve the basic profile in LinkedIn.  msg.payload must contain the access token (OAuth 2.0). The <b>linkedin request access token</b> can be immediately called before this node.  The msg.payload should contain the result of the request according to the configuration of the node as a JSON object.
+    </p>
+    <p>
+	See <a href="https://developer.linkedin.com/docs/signin-with-linkedin">LinkedIn API</a> for more information.
+    </p>
+</script>

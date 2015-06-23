@@ -1,0 +1,51 @@
+
+<script type="text/javascript">
+    RED.nodes.registerType('linkedin-request-access-token',{
+        category: 'social',
+        color: '#8CC63F',
+        defaults: {
+	    name : {value:"linkedin request access token"},
+            redirect_uri : {value: ""}
+        },
+        credentials: {
+            client_id : {type: "text"},
+            client_secret : {type: "password"}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "light.png",
+        label: function() {
+            return this.name||"linkedin request access token";
+        },
+	paletteLabel: "linkedin request access token"
+    });
+</script>
+
+<script type="text/x-red" data-template-name="linkedin-request-access-token">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> name</label>
+	<input type="text" id="node-input-name" placeholder="name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-client_id"><i class="icon-tag"></i> Client id</label>
+        <input type="text" id="node-input-client_id">
+    </div>
+    <div class="form-row">
+        <label for="node-input-client_secret"><i class="icon-tag"></i> Client secret</label>
+        <input type="password" id="node-input-client_secret">
+    </div>
+    <div class="form-row">
+        <label for="node-input-redirect_uri"><i class="icon-tag"></i> redirect uri</label>
+        <input type="text" id="node-input-redirect_uri">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="linkedin-request-access-token">
+    <p>
+        This accept a LinkedIn callback to the application.  The application calls back to LinkedIn to obtain an access token (OAuth 2.0) to complete the user authentication.  The msg.payload output contains the token <b>msg.payload.access_token</b> expiring in <b>msg.payload.expires</b>.  The state parameter can be checked before this node.  The parameters <b>client id</b>, <b>client secret</b>, <b>redirect uri</b> need to match those provided by your application configration in LinkedIn.
+
+    </p>
+    <p>
+	See <a href="https://developer.linkedin.com/docs/signin-with-linkedin">LinkedIn API</a> for more information.
+    </p>
+</script>
