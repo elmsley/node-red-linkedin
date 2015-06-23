@@ -14,5 +14,13 @@
     "linkedin",
     "oauth",
     "2.0"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elmsley/node-red-linkedin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/elmsley/node-red-linkedin/issues"
+  },
+  "homepage": "https://github.com/elmsley/node-red-linkedin"
 }
