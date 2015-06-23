@@ -42,3 +42,6 @@ Nodes related to integrating single sign-on with LinkedIn (OAuth 2.0)
 
  ### http response
  - Return control back to the user.
+
+# Copyright and License
+Copyright 2015 Jason Mah under the <a href="https://github.com/nevir/readable-licenses/blob/master/markdown/ISC-LICENSE.md">ISC License</a>
